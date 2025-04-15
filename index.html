@@ -6,24 +6,50 @@
   <title>James Howard | Cybersecurity Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
     a { color: #58a6ff; }
-    .section-title { border-bottom: 1px solid #30363d; margin-bottom: 1rem; padding-bottom: 0.5rem; }
-    .card { background-color: #161b22; border: none; }
-    .btn-custom { background-color: #238636; color: white; }
-    .btn-custom:hover { background-color: #2ea043; }
+    .section-title {
+      border-bottom: 1px solid #30363d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .card {
+      background-color: #161b22;
+      border: none;
+      height: 100%;
+    }
+    .btn-custom {
+      background-color: #238636;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #2ea043;
+    }
+    .card h5, .card p {
+      text-align: left;
+    }
+    .card .btn {
+      width: 100%;
+    }
   </style>
 </head>
 <body class="container py-4">
   <h1 class="mb-4">James Howard – Offensive Security + Tool Development</h1>
-  <p>I'm currently studying a Bachelor of Cybersecurity and actively working through TryHackMe to enhance my practical skills in red teaming and exploitation. My goal is to break into the industry as a junior penetration tester</p>
+  <p class="lead mx-auto" style="max-width: 700px;">
+    I'm currently studying a Bachelor of Cybersecurity and actively working through TryHackMe, Hack The Box, and building practical skills in red teaming and exploitation. My goal is to break into the industry as a junior penetration tester, build my reputation, and later launch EGM — Exceptionally Gifted Machines.
+  </p>
 
-  <!-- TOOLS SECTION -->
+  <!-- Tools Section -->
   <div class="my-5">
     <h3 class="section-title">🛠️ Tools I Use</h3>
-
-    <!-- Top 3 Tools -->
-    <div class="row g-3">
+    <div class="row justify-content-center g-3">
+      <!-- Top 3 -->
       <div class="col-md-4">
         <div class="card p-3">
           <h5>Nmap</h5>
@@ -48,7 +74,7 @@
     </div>
 
     <!-- Hidden Tools -->
-    <div id="more-tools" class="row g-3 mt-3" style="display: none;">
+    <div id="more-tools" class="row justify-content-center g-3 mt-3" style="display: none;">
       <div class="col-md-4">
         <div class="card p-3">
           <h5>Hydra</h5>
@@ -85,10 +111,10 @@
     </div>
   </div>
 
-  <!-- LABS SECTION -->
+  <!-- Labs Section -->
   <div class="my-5">
     <h3 class="section-title">📁 Labs & Writeups</h3>
-    <div class="row g-3">
+    <div class="row justify-content-center g-3">
       <div class="col-md-4">
         <div class="card p-3">
           <h5>Lab 1</h5>
@@ -113,10 +139,10 @@
     </div>
   </div>
 
-  <!-- CONNECT SECTION -->
+  <!-- Connect Section -->
   <div class="my-5">
     <h3 class="section-title">🌐 Connect With Me</h3>
-    <ul>
+    <ul class="list-unstyled">
       <li><a href="https://www.linkedin.com/in/jameshowardegm/" target="_blank">LinkedIn</a></li>
       <li><a href="https://github.com/JamesHowardEGM" target="_blank">GitHub</a></li>
       <li><a href="https://tryhackme.com/p/JamesHowardEGM" target="_blank">TryHackMe</a></li>
