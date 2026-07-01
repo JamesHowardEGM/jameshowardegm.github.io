@@ -25,6 +25,11 @@
     h2.section-title { font-size: 2rem; font-weight: 700; margin-bottom: 3rem; }
     h2.section-title span { color: var(--accent); }
     #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 60px; text-align: center; }
+    .hero-inner { display: flex; align-items: center; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+    .hero-text { flex: 1; min-width: 280px; text-align: left; }
+    .hero-photo { flex-shrink: 0; }
+    .hero-photo img { width: 220px; height: 220px; object-fit: cover; object-position: center top; border-radius: 50%; border: 3px solid var(--accent); box-shadow: 0 0 40px rgba(88,166,255,0.2); }
+    @media(max-width:700px){ .hero-inner { flex-direction: column-reverse; gap: 2rem; } .hero-text { text-align: center; } .hero-photo img { width: 160px; height: 160px; } }
     .hero-badge { display: inline-block; background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.3); color: var(--accent); font-size: 0.8rem; padding: 0.3rem 1rem; border-radius: 20px; margin-bottom: 1.5rem; }
     #hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; background: linear-gradient(135deg, #e6edf3 0%, #58a6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-typing { font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--text-muted); margin-bottom: 1.5rem; min-height: 2rem; }
@@ -125,13 +130,20 @@
   <a href="https://www.linkedin.com/in/jameshowardegm/" target="_blank" class="btn btn-primary" style="padding:0.4rem 1rem;font-size:0.85rem;">LinkedIn</a>
 </nav>
 <section id="hero">
-  <h1>James Howard</h1>
-  <div class="hero-typing"><span id="typing-text"></span><span class="cursor"></span></div>
-  <p class="hero-desc">Cybersecurity professional with hands-on experience in SOC monitoring, incident investigation, and cloud infrastructure. Specialising in Microsoft Sentinel, the Defender suite, and Azure security.</p>
-  <div class="hero-buttons">
-    <a href="#projects" class="btn btn-primary">View Projects</a>
-    <a href="https://www.linkedin.com/in/jameshowardegm/" target="_blank" class="btn btn-outline">LinkedIn</a>
-    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>James Howard</h1>
+      <div class="hero-typing"><span id="typing-text"></span><span class="cursor"></span></div>
+      <p class="hero-desc">Cybersecurity professional with hands-on experience in SOC monitoring, incident investigation, and cloud infrastructure. Specialising in Microsoft Sentinel, the Defender suite, and Azure security.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://www.linkedin.com/in/jameshowardegm/" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/Head shot.png" alt="James Howard" />
+    </div>
   </div>
 </section>
 <section id="about">
