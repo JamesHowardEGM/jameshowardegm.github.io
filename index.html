@@ -198,6 +198,10 @@
         I also supported the team's <strong style="color:var(--text);">Sentinel audit workflow</strong>, which directly inspired my SOC Audit Architect project, a Python tool I built to automate the manual parts of that process. Seeing the inefficiency of the existing workflow in a real SOC environment gave me the motivation to solve it with code.
       </p>
 
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:2rem;">
+        One of the more meaningful contributions I made came from analysing the top recurring alerts across client environments. I identified a high-volume alert flagging <strong style="color:var(--text);">malicious SQL injection activity</strong> that was generating significant noise. After investigating, I determined the activity was being triggered by a client's geology team running complex database queries as part of their research workflows — completely legitimate behaviour that the rule had no context for. Rather than simply suppressing the alert, I proposed a structured solution: create a dedicated security group for the geology team and implement an <strong style="color:var(--text);">exclusion within the analytics rule</strong> scoped to that group. This preserved the integrity of the detection for everyone else while eliminating the false positives at the source. It was a practical example of how good detection engineering is not just about writing queries — it is about understanding the environment, the people in it, and building rules that are precise enough to reduce <strong style="color:var(--text);">alert fatigue</strong> without creating blind spots.
+      </p>
+
       <div style="border-top:1px solid var(--border);padding-top:1.5rem;">
         <p style="font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Technologies Used</p>
         <div class="tags">
