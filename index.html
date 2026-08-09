@@ -355,16 +355,6 @@
   function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); drawConnections(); requestAnimationFrame(animate); }
   window.addEventListener("resize",()=>{resize();initParticles();});
   resize(); initParticles(); animate();
-  const phrases=["IT & Security Graduate","SOC Analyst","Network Security Engineer","Application Security","Physical Security Analyst"];
-  let phraseIdx=0,charIdx=0,deleting=false;
-  const typingEl=document.getElementById("typing-text");
-  function type() {
-    const current=phrases[phraseIdx];
-    if(!deleting){ typingEl.textContent=current.slice(0,++charIdx); if(charIdx===current.length){deleting=true;setTimeout(type,1800);return;} }
-    else { typingEl.textContent=current.slice(0,--charIdx); if(charIdx===0){deleting=false;phraseIdx=(phraseIdx+1)%phrases.length;} }
-    setTimeout(type,deleting?50:80);
-  }
-  type();
   const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible");});},{threshold:0.1});
   document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
   const sections=document.querySelectorAll("section[id]");
